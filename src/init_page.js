@@ -9,12 +9,14 @@ const createImage = () => {
 
 const createHeadline = () => {
   const headline = document.createElement('h1')
-  headline.textContent = 'Welcome to the Restaurant'
+  headline.textContent = 'Welcome to the Webpack Restaurant'
   return headline
 }
 
 const createRestaurantInfo = () => {
-
+  const p = document.createElement('p')
+  p.textContent = 'This p tag was creating with javascript and webpack'
+  return p;
 }
 
 const pageLoad = () => {
@@ -22,9 +24,9 @@ const pageLoad = () => {
 
   container.append(
     createHeadline(), 
-    createImage()
+    createImage(),
+    createRestaurantInfo()
   )
-  // createRestaurantInfo()
 }
 
 export default pageLoad
