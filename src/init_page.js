@@ -1,5 +1,20 @@
 import Restaurant from './restaurant.jpeg';
 
+const createTabs = () => {
+  const tabs = document.createElement('ul')
+  
+  const menu = document.createElement('li')
+  menu.textContent = 'view menu'
+  menu.id = 'menu'
+
+  const contact = document.createElement('li')
+  contact.textContent = 'contact us'
+  contact.id = 'contact'
+  
+  tabs.append(menu, contact)
+  return tabs
+}
+
 const createImage = () => {
   const image = new Image();
   image.src = Restaurant
@@ -18,11 +33,19 @@ const createRestaurantInfo = () => {
   return p;
 }
 
+const createTabView = () => {
+  const tabView = document.createElement('div')
+  tabView.id = 'tabView'
+  return tabView;
+}
+
 const pageLoad = () => {
   const container = document.querySelector('#content')
 
   container.append(
-    createHeadline(), 
+    createHeadline(),
+    createTabs(),
+    createTabView(),
     createImage(),
     createRestaurantInfo()
   )

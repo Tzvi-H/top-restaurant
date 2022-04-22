@@ -1,3 +1,7 @@
 #content {
   color: lightblue;
 }
+
+li:hover {
+  cursor: pointer;
+}
