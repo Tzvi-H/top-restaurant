@@ -1,1 +1,3 @@
-console.log('hello from src/index.js')
+import pageLoad from './init_page'
+
+pageLoad()
