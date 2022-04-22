@@ -3,7 +3,6 @@ import Restaurant from './restaurant.jpeg';
 const createImage = () => {
   const image = new Image();
   image.src = Restaurant
-  console.log(image)
   return image
 }
 
